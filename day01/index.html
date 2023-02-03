@@ -4,7 +4,163 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          fontFamily: {
+            poppin: ["Poppins", "sans-serif"],
+          },
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>DailyUI Day01 Sign up Page</title>
   </head>
-  <body></body>
+  <body class="font-popping">
+    <!-- background -->
+    <div
+      class="h-screen bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100 dark:bg-gradient-to-b dark:from-gray-900 dark:via-purple-900 dark:to-violet-600 flex justify-center items-center"
+    >
+      <!-- sign up card -->
+      <div class="flex shadow-2xl">
+        <!-- log in -->
+        <div
+          class="flex flex-col space-y-10 bg-white px-16 py-5 dark:bg-zinc-900"
+        >
+          <!-- logo -->
+          <span
+            class="text-5xl tracking-[-0.075em] dark:text-white cursor-pointer"
+            >ae</span
+          >
+          <!-- font -->
+          <div>
+            <p class="text-slate-500 text-6xl dark:text-slate-100">
+              We are <b class="text-black dark:text-yellow-500">aroma</b>
+            </p>
+            <p class="text-slate-500 text-2xl mt-5 dark:text-white">
+              Welcome Back, Please login<br />to your account.
+            </p>
+          </div>
+          <!-- log in details -->
+          <div>
+            <input
+              type="text"
+              name=""
+              id=""
+              class="border border-slate-500 border-l-pink-500 h-[50px] w-[500px]"
+            />
+            <br />
+            <input
+              type="text"
+              name=""
+              id=""
+              class="border border-slate-500 h-[50px] w-[500px] shadow-2xl"
+            />
+            <div class="flex justify-between my-7">
+              <div>
+                <input type="checkbox" name="" id="" />
+                <span class="text-slate-500 dark:text-white">Remember me</span>
+              </div>
+              <div>
+                <a
+                  href=""
+                  class="hover:text-slate-500 dark:text-white dark:hover:text-yellow-500"
+                  >Forget password</a
+                >
+              </div>
+            </div>
+            <div class="flex">
+              <a href="">
+                <div
+                  class="border border-black rounded-lg text-white bg-black py-1 px-10 mr-5 hover:bg-white hover:text-black dark:bg-yellow-500 dark:text-black dark:hover:bg-white"
+                >
+                  Log in
+                </div></a
+              >
+              <a href="">
+                <div
+                  class="border border-slate-300 text-slate-500 rounded-lg py-1 px-8 hover:border-black hover:text-black dark:border-yellow-500 dark:text-yellow-500"
+                >
+                  Sign up
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- terms & conditions -->
+          <div class="pb-16">
+            <p class="text-slate-500 dark:text-white">
+              By signing up, you agree tp Aroma's <br /><a href=""
+                ><b
+                  class="text-black hover:text-slate-500 dark:text-yellow-500 dark:hover:text-white"
+                  >Terms and Conditions</b
+                ></a
+              >
+              &
+              <a href=""
+                ><b
+                  class="text-black hover:text-slate-500 dark:text-yellow-500 dark:hover:text-white"
+                  >Privacy Policy</b
+                ></a
+              >
+            </p>
+          </div>
+        </div>
+        <!-- display -->
+        <div
+          class="bg-cover"
+          style="background-image: url('./wallpaperflare.com_wallpaper.jpg')"
+        >
+          <div class="backdrop-blur-sm bg-black/50 h-full px-10">
+            <!-- navbar -->
+            <div
+              class="flex space-x-10 p-10 uppercase text-white font-medium text-right text-md ml-24"
+            >
+              <a href="" class="hover:text-slate-200">About Us</a>
+              <a href="" class="hover:text-slate-200">Showcase</a>
+              <a href="" class="hover:text-slate-200">Letters</a>
+              <a href="" class="hover:text-slate-200">Contact</a>
+              <a href="" class="hover:text-slate-200">Blog</a>
+            </div>
+            <!-- logo -->
+            <div class="flex justify-center items-center">
+              <div
+                class="backdrop-blur-sm bg-white/70 py-[70px] px-[120px] rounded-xl text-black text-[120px] mt-10"
+              >
+                a
+              </div>
+            </div>
+            <!-- buttons -->
+            <div class="flex space-x-5 justify-end mt-32">
+              <a href="">
+                <div
+                  class="text-white uppercase border border-white py-2 px-5 hover:bg-white hover:text-black"
+                >
+                  Previous
+                </div></a
+              >
+              <a href="">
+                <div
+                  class="text-white uppercase bg-[#6d7e78] py-2 px-8 hover:bg-white hover:text-black"
+                >
+                  Next
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
