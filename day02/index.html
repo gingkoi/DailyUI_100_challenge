@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            kanit: ["Kanit", "sans-serif"],
+          },
+          extend: {
+            colors: {
+              main_blue: "#bcdee7",
+              main_pink: "#f7c6a6",
+              main_grey: "#514948",
+              main_green: "#b4dcb1",
+              main_slate: "#e4e4e4",
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Check Out</title>
+  </head>
+  <body class="font-kanit">
+    <!-- background -->
+    <div
+      class="bg-gradient-to-r from-rose-100 to-teal-100 h-screen flex justify-center items-center"
+    >
+      <!-- card -->
+      <div class="flex">
+        <!-- left-side -->
+        <div class="bg-main_blue pl-10 pr-24 pt-36 pb-80 text-white">
+          <h1 class="uppercase text-4xl font-medium">Ceramic Vase <br /></h1>
+          <h2 class="text-3xl font-medium">by John Doe</h2>
+          <p class="text-8xl font-bold mt-8 tracking-wide">$ 35</p>
+        </div>
+        <!-- right-side -->
+        <div class="flex flex-col space-y-16 bg-white pt-12">
+          <a
+            href=""
+            class="text-xl text-main_slate pl-10 pr-20 hover:opacity-80"
+            >< Back to store</a
+          >
+          <h3 class="uppercase text-main_grey font-medium text-3xl pl-10 pr-20">
+            Payment Details
+          </h3>
+          <!-- text details -->
+          <div class="flex flex-col space-y-5 pl-10 pr-20">
+            <!-- name on card -->
+            <div>
+              <input
+                type="text"
+                class="border border-b-main_green border-transparent outline-transparent outline-main_green w-[350px] font-light uppercase"
+              />
+              <p
+                class="uppercase font-medium tracking-wide text-sm mt-1 text-main_green"
+              >
+                Name On Card
+              </p>
+            </div>
+            <!-- Card Number -->
+            <div>
+              <input
+                type="text"
+                class="border border-b-main_slate border-transparent outline-transparent outline-main_slate w-[350px] font-light uppercase text-main_slate tracking-widest"
+              />
+              <p
+                class="uppercase font-medium tracking-wide text-sm mt-1 text-main_green"
+              >
+                Card Number
+              </p>
+            </div>
+            <!-- Expiry Date & CVC -->
+            <div class="flex justify-between">
+              <div>
+                <input
+                  type="text"
+                  class="border border-b-main_slate border-transparent outline-transparent outline-main_slate w-[180px] font-light uppercase text-main_slate tracking-widest"
+                />
+                <p
+                  class="uppercase font-medium tracking-wide text-sm mt-1 text-main_green"
+                >
+                  Expiration date
+                </p>
+              </div>
+              <div>
+                <input
+                  type="text"
+                  class="border border-b-main_slate border-transparent outline-transparent outline-main_slate w-[100px] font-light uppercase text-main_slate tracking-widest"
+                />
+                <p
+                  class="uppercase font-medium tracking-wide text-sm mt-1 text-main_green"
+                >
+                  CVC
+                </p>
+              </div>
+            </div>
+            <!-- Remember my card info -->
+            <div class="flex space-x-3">
+              <input type="checkbox" name="" id="" class="checked:bg-red-500" />
+              <p
+                class="uppercase font-medium tracking-wide text-sm mt-1 text-main_green"
+              >
+                Remembermy card info
+              </p>
+            </div>
+          </div>
+          <!-- Purchase Box -->
+          <div
+            class="flex justify-center items-center h-full bg-main_pink hover:opacity-80"
+          >
+            <a href="">
+              <div
+                class="text-center text-white text-2xl uppercase tracking-widest"
+              >
+                Purchase >
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
