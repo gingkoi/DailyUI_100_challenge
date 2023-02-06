@@ -19,6 +19,19 @@
         },
       };
     </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+        .rounded-4xl {
+          border-radius: 4rem;
+        }
+        .leading-special {
+          line-height: 0.9;
+        }
+      }
+    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,10 +42,11 @@
   </head>
   <body class="font-monts">
     <!-- background -->
-    <div class="bg-[#f3f3f3] h-screen">
+    <div class="bg-[#f3f3f3] h-full">
       <!-- mobile menu -->
       <div
-        class="sm:hidden absolute w-full h-[500px] bg-white border border-black top-0 rounded-b-2xl"
+        class="hidden absolute w-full h-[500px] bg-white border border-black top-0 rounded-b-2xl"
+        id="menu"
       >
         <div class="flex flex-col items-center space-y-5 text-2xl pt-16">
           <a class="hover:opacity-60" href="">Platform</a>
@@ -61,7 +75,7 @@
           Stretch.
         </div>
         <!-- hambuger -->
-        <div class="sm:hidden space-y-1">
+        <div class="sm:hidden space-y-1 hover:opacity-60" id="hamburger">
           <div class="h-1 w-6 bg-black"></div>
           <div class="h-1 w-6 bg-black"></div>
           <div class="h-1 w-6 bg-black"></div>
@@ -87,7 +101,59 @@
         </div>
       </div>
       <!-- hero card -->
+      <div>
+        <!-- back card -->
+        <div
+          class="bg-[#e8dcc5] sm:h-[700px] sm:mx-7 sm:rounded-4xl sm:flex justify-end"
+        >
+          <!-- front card -->
+          <div
+            class="bg-white sm:h-[700px] rounded-4xl sm:w-[55%] pt-5 sm:p-16"
+          >
+            <h2
+              class="text-[50px] text-center sm:text-left sm:text-[80px] font-bold sm:leading-tight sm:tracking-wide"
+            >
+              Everything you<br />need to scale<br />a global team
+            </h2>
+            <h3
+              class="text-center sm:text-left mt-5 sm:text-xl sm:text-slate-700"
+            >
+              Grow bigger with Stretch. Hire faster by adopting <br />
+              the best HR processes, simplify payroll, and stay <br />
+              compiliant, no matter where your team is located.
+            </h3>
+            <!-- email box -->
+            <div class="sm:flex sm:mt-28 sm:h-16">
+              <input
+                type="text"
+                value="Type your awesome email"
+                class="border border-black rounded-l-2xl w-96 text-slate-600"
+              />
+              <a
+                href=""
+                class="bg-black text-white py-3 px-5 rounded-r-2xl flex items-center hover:opacity-80"
+              >
+                <div>Request a demo</div></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- footer -->
+      <div class="flex justify-between mx-16 py-16">
+        <h3 class="text-lg text-slate-700">
+          More than 14,000 business use <br />
+          Stretch (and counting)
+        </h3>
+        <div class="flex justify-center space-x-10">
+          <div>Logo 1</div>
+          <div>Logo 2</div>
+          <div>Logo 3</div>
+          <div>Logo 4</div>
+          <div>Logo 5</div>
+        </div>
+      </div>
     </div>
+    <script src="./app.js"></script>
   </body>
 </html>
