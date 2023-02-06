@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            monts: ["Montserrat", "sans-serif"],
+          },
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Day 03 Landing Page</title>
+  </head>
+  <body class="font-monts">
+    <!-- background -->
+    <div class="bg-[#f3f3f3] h-screen">
+      <!-- mobile menu -->
+      <div
+        class="sm:hidden absolute w-full h-[500px] bg-white border border-black top-0 rounded-b-2xl"
+      >
+        <div class="flex flex-col items-center space-y-5 text-2xl pt-16">
+          <a class="hover:opacity-60" href="">Platform</a>
+          <a class="hover:opacity-60" href="">Use cases</a>
+          <a class="hover:opacity-60" href="">Why stretch</a>
+          <a class="hover:opacity-60" href="">Resources</a>
+          <a class="hover:opacity-60" href="">Pricing</a>
+          <a
+            href=""
+            class="border border-black py-3 px-6 rounded-xl text-lg hover:opacity-60"
+            >Log in</a
+          >
+          <a href=""
+            ><div
+              class="border border-black py-3 px-6 rounded-xl text-lg hover:bg-white"
+            >
+              Get started
+            </div></a
+          >
+        </div>
+      </div>
+      <!-- navbar -->
+      <div class="flex justify-between mx-7 py-7 items-center">
+        <!-- logo -->
+        <div class="font-bold text-3xl tracking-wide cursor-pointer">
+          Stretch.
+        </div>
+        <!-- hambuger -->
+        <div class="sm:hidden space-y-1">
+          <div class="h-1 w-6 bg-black"></div>
+          <div class="h-1 w-6 bg-black"></div>
+          <div class="h-1 w-6 bg-black"></div>
+        </div>
+        <!-- links -->
+        <div class="hidden sm:flex sm:space-x-16 sm:text-lg sm:font-medium">
+          <a class="hover:opacity-60" href="">Platform</a>
+          <a class="hover:opacity-60" href="">Use cases</a>
+          <a class="hover:opacity-60" href="">Why stretch</a>
+          <a class="hover:opacity-60" href="">Resources</a>
+          <a class="hover:opacity-60" href="">Pricing</a>
+        </div>
+        <!-- log in -->
+        <div class="hidden sm:flex sm:space-x-5 sm:items-center">
+          <a href="" class="text-lg hover:opacity-60">Log in</a>
+          <a href=""
+            ><div
+              class="border border-black py-3 px-6 rounded-xl text-lg hover:bg-white"
+            >
+              Get started
+            </div></a
+          >
+        </div>
+      </div>
+      <!-- hero card -->
+      <!-- footer -->
+    </div>
+  </body>
+</html>
