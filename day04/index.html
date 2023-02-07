@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+        .rounded-4xl {
+          border-radius: 3rem;
+        }
+        .rounded-b-4xl {
+          border-bottom-right-radius: 3rem; /* 24px */
+          border-bottom-left-radius: 3rem; /* 24px */
+        }
+      }
+    </style>
+    <title>Day05 Calculator</title>
+  </head>
+  <body>
+    <!-- background -->
+    <div class="bg-red-500 h-screen flex justify-center items-center">
+      <!-- Calculator -->
+      <div>
+        <!-- display -->
+
+        <div class="flex items-end w-[400px] h-[660px] bg-zinc-800 rounded-4xl">
+          <div
+            class="flex justify-between w-[400px] h-[380px] bg-white rounded-b-4xl"
+          >
+            <!-- button placement -->
+            <div
+              class="flex flex-grow grid items-center grid-cols-3 gap-4 text-3xl text-center my-10"
+            >
+              <a href="" class="hover:text-[#73d863]">7</a>
+              <a href="" class="hover:text-[#73d863]">8</a>
+              <a href="" class="hover:text-[#73d863]">9</a>
+              <a href="" class="hover:text-[#73d863]">4</a>
+              <a href="" class="hover:text-[#73d863]">5</a>
+              <a href="" class="hover:text-[#73d863]">6</a>
+              <a href="" class="hover:text-[#73d863]">1</a>
+              <a href="" class="hover:text-[#73d863]">2</a>
+              <a href="" class="hover:text-[#73d863]">3</a>
+              <a href="" class="hover:text-[#73d863]">0</a>
+              <a href="" class="hover:text-[#73d863]">,</a>
+              <a href="" class="hover:text-[#73d863]">=</a>
+            </div>
+            <div
+              class="items-center grid grid-cols-1 gap-4 text-3xl text-center px-10 py-10 bg-[#73d863]"
+            >
+              <a href="" class="hover:text-white">C</a>
+              <a href="" class="hover:text-white">x</a>
+              <a href="" class="hover:text-white">-</a>
+              <a href="" class="hover:text-white">+</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div></div>
+    </div>
+  </body>
+</html>
