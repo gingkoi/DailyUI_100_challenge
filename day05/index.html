@@ -6,6 +6,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
+        darkMode: "class",
         theme: {
           fontFamily: {
             poppin: ["Poppins", "sans-serif"],
@@ -29,57 +30,105 @@
         .content-auto {
           content-visibility: auto;
         }
+        .nightmode {
+          fill: red;
+        }
       }
     </style>
   </head>
-  <body class="font-poppin">
-    <div class="flex justify-between my-5 ml-20">
+  <body class="font-poppin h-screen">
+    <div
+      class="sm:flex sm:justify-between sm:pt-5 sm:pl-20 h-screen dark:bg-[#171717] dark:text-white"
+    >
       <!-- picture -->
-      <div class="w-[659px]">
-        <img src="./pexels-thach-tran-756856.jpg" alt="" class="rounded-3xl" />
+      <div class="sm:w-[659px] w-0">
+        <img
+          src="./pexels-thach-tran-756856.jpg"
+          alt=""
+          class="rounded-3xl hover:opacity-80 cursor-pointer"
+        />
       </div>
       <!-- log in details -->
-      <div class="flex-grow mx-32 items-center pt-36">
-        <div class="space-y-8 mb-10">
+      <div
+        class="sm:flex sm:flex-grow sm:mx-32 sm:pt-24 mx-5 h-screen px-5 pt-10"
+      >
+        <div class="space-y-8 mb-5">
           <h1 class="text-5xl font-bold">Welcome!</h1>
           <h2>Log in your account</h2>
-        </div>
-        <div>
-          <p>Your Email</p>
-          <input
-            type="text"
-            name=""
-            id=""
-            class="border border-black rounded-lg h-12 w-[450px] mt-3 mb-5"
-          />
-          <p>Password</p>
-          <input
-            type="text"
-            name=""
-            id=""
-            class="border border-black rounded-lg h-12 w-[450px] mt-3"
-          />
-          <div class="flex justify-between mt-3">
-            <p><input type="checkbox" /> Remember Me</p>
-            <a href="">Forget Password?</a>
-          </div>
-          <a href=""
-            ><div
-              class="flex h-12 w-[450px] bg-[#4974e8] rounded-lg justify-center items-center text-white font-bold text-lg mt-5 hover:opacity-80"
+          <div>
+            <p>Your Email</p>
+            <input
+              type="text"
+              name=""
+              id=""
+              class="border border-black rounded-lg h-12 w-full mt-3 mb-5"
+            />
+            <p>Password</p>
+            <input
+              type="text"
+              name=""
+              id=""
+              class="border border-black rounded-lg h-12 w-full mt-3"
+            />
+            <div class="flex justify-between mt-3">
+              <p><input type="checkbox" /> Remember Me</p>
+              <a href="">Forget Password?</a>
+            </div>
+            <a href=""
+              ><div
+                class="flex h-12 w-full bg-[#4974e8] rounded-lg justify-center items-center text-white font-bold text-lg mt-5 hover:opacity-80 dark:bg-[#DA0037]"
+              >
+                Login
+              </div></a
             >
-              Login
-            </div></a
-          >
-          <div
-            class="w-full h-[20px] border border-b-4 border-t-0 border-l-0 border-r-0 border-neutral-100 text-center mt-10"
-          >
-            <span class="bg-white text-2xl p-2 text-neutral-200">
-              or
-              <!--Padding is optional-->
-            </span>
+            <div
+              class="w-full h-[20px] border border-b-4 border-t-0 border-l-0 border-r-0 border-neutral-100 text-center mt-10"
+            >
+              <span
+                class="bg-white text-2xl p-2 text-neutral-200 dark:bg-[#171717]"
+              >
+                or
+              </span>
+            </div>
+            <!-- google or facebook -->
+            <div class="flex space-x-3 mt-10">
+              <a href="">
+                <div class="flex border items-center space-x-2 p-2">
+                  <img src="./google.svg" class="w-[30px]" alt="" />
+                  <p class="text-md text-neutral-500 dark:text-white">
+                    Continue with Google
+                  </p>
+                </div>
+              </a>
+              <a
+                href="https://www.w3schools.com"
+                class="flex border items-center space-x-2 p-2"
+              >
+                <img src="./facebook.svg" class="w-[30px]" alt="" />
+                <p class="text-md text-neutral-500 dark:text-white">
+                  Continue with Facebook
+                </p>
+              </a>
+            </div>
+            <!-- sign up -->
+            <div class="flex justify-center items-center pt-12">
+              <p class="text-center">
+                Don't have any account?
+                <a
+                  href=""
+                  class="font-bold text-[#4974e8] hover:underline dark:text-[#DA0037]"
+                  >Sign Up</a
+                >
+              </p>
+            </div>
           </div>
         </div>
       </div>
+      <div class="w-0 sm:cursor-pointer sm:pr-5 sm:w-20" id="night">
+        <img class="dark:hidden" src="./icons8-sun.svg" alt="" />
+        <img src="./sun_white.svg" alt="" />
+      </div>
     </div>
+    <script src="./app.js"></script>
   </body>
 </html>
