@@ -19,6 +19,7 @@
         },
       };
     </script>
+    <script src="./app.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,7 +31,7 @@
     <div class="flex">
       <!-- navbar -->
       <div
-        class="bg-[#2664ea] w-[5%] h-auto flex flex-col justify-between items-center"
+        class="bg-[#2664ea] w-[5%] h-[1144px] flex flex-col justify-between items-center"
       >
         <a href="" class="w-full p-5 bg-[#265cd9]"
           ><svg
@@ -139,11 +140,11 @@
         /></a>
       </div>
       <!-- settings -->
-      <div class="w-[30%]">
+      <div class="w-[30%]" id="tabs-id">
         <div class="bg-white border py-5 text-2xl pl-5 font-bold">
           Settings
         </div>
-        <div class="flex border hover:bg-[#f7faff] cursor-pointer" id="account_click">
+        <div class="flex border hover:bg-[#f7faff] cursor-pointer block" id="tab-account">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -172,7 +173,7 @@
             </p>
           </div>
         </div>
-        <div class="flex border hover:bg-[#f7faff] cursor-pointer" id="noti_click">
+        <div class="flex border hover:bg-[#f7faff] cursor-pointer" id="tab-noti">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="#8e9bac" class="w-20 h-20 ml-5 flex">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
               </svg>              
@@ -222,7 +223,8 @@
         </div>
         </div>
               <!-- details -->
-        <div class="hidden px-32 py-10 grow bg-[#f8fafc] border" id="account"> 
+        <div class="px-32 py-10 grow bg-[#f8fafc] border tab-content tab-space">
+          <div class="" id="account"> 
             <h1 class="text-4xl font-bold">Account</h1>
             <div class="my-3">
                 <h2 class="text-2xl font-semibold">Profile</h2>
@@ -296,12 +298,13 @@
                 </div>
             </div>
         </div>
-        <div class="hidden px-32 py-10 grow bg-[#f8fafc] border" id="noti">
+        <div class="hidden" id="noti">
             <h1 class="text-4xl font-bold">Notification</h1>
+        </div>
+
         </div>
       </div>
     </div>
-    <script src="./app.js">
     </script>
   </body>
 </html>
