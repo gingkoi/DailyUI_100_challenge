@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            poppin: ["Poppins", "sans-serif"],
+          },
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+      <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+          .rounded-4xl {
+            border-radius: 6rem;
+          }
+        }
+      </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>404 Error Page</title>
+  </head>
+  <body class="font-poppin">
+    <!-- background -->
+    <div class="flex h-screen static">
+      <div class="flex flex-col justify-between w-1/2 h-screen">
+        <div class="bg-[#609EA2] h-full"></div>
+        <div class="bg-[#f4f0ed] h-full"></div>
+      </div>
+      <div class="flex flex-col justify-between w-1/2 h-screen">
+        <div class="bg-[#C92C6D] h-full"></div>
+        <div class="bg-[#332C39] h-full"></div>
+      </div>
+    </div>
+    <!-- card -->
+    <div class="bg-white w-4/6 h-5/6 top-[10%] left-[16.5%] absolute rounded-4xl border-4 border-black px-20 py-20">
+        <!-- navbar -->
+        <div class="flex justify-between px-16">
+            <div><a href="" class="flex items-center space-x-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
+                <path d="M9.375 3a1.875 1.875 0 000 3.75h1.875v4.5H3.375A1.875 1.875 0 011.5 9.375v-.75c0-1.036.84-1.875 1.875-1.875h3.193A3.375 3.375 0 0112 2.753a3.375 3.375 0 015.432 3.997h3.943c1.035 0 1.875.84 1.875 1.875v.75c0 1.036-.84 1.875-1.875 1.875H12.75v-4.5h1.875a1.875 1.875 0 10-1.875-1.875V6.75h-1.5V4.875C11.25 3.839 10.41 3 9.375 3zM11.25 12.75H3v6.75a2.25 2.25 0 002.25 2.25h6v-9zM12.75 12.75v9h6.75a2.25 2.25 0 002.25-2.25v-6.75h-9z" />
+              </svg><p class="text-3xl font-bold underline decoration-pink-500">Gifter</p>
+              </a></div>
+            <div class="text-xl font-semibold space-x-10">
+                <a href="" class="hover:opacity-60">Volunteers</a>
+                <a href="" class="hover:opacity-60">Call to Action</a>
+                <a href="" class="hover:opacity-60">About Us</a>
+                <a href="" class="hover:opacity-90 hover:text-[#e95075] bg-[#100a11] text-white py-1 px-12 rounded-3xl">Join</a>
+            </div>
+        </div>
+        <div class="flex justify-around mt-10">
+            <div>
+                <h1 class="font-medium text-[210px] h-[250px]">404</h1>
+                <h2 class="text-[49px] leading-none">Something went <br><b>wrong!</b></h2>
+                <button class="border py-6 px-5 bg-[#e95075] rounded-4xl text-xl mt-10 text-white border-2 border-black hover:opacity-60">Back to Homepage</button>
+            </div>
+            <div><object data="./coffee.svg" class="w-[720px] flex justify-end pl-20" type=""></object></div>
+        </div>
+    </div>
+    </div>
+  </body>
+</html>
