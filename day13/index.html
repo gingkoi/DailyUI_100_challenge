@@ -6,7 +6,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
+        darkMode: "class",
         theme: {
+          fontFamily: {
+            poppin: ["Poppins", "sans-serif"],
+          },
           extend: {
             colors: {
               clifford: "#da373d",
@@ -15,15 +19,103 @@
         },
       };
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <style type="text/tailwindcss">
       @layer utilities {
         .content-auto {
           content-visibility: auto;
         }
+        .rounded-4xl {
+          border-radius: 3rem; /* 24px */
+        }
       }
     </style>
   </head>
-  <body>
-    <h1 class="text-3xl font-bold underline **text-clifford**">Hello world!</h1>
+  <body class="font-poppin">
+    <!-- background -->
+    <div
+      class="flex justify-center items-center h-screen bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100 relative dark:bg-gradient-to-r dark:from-red-500 dark:to-green-500"
+    >
+      <div
+        class="absolute top-[1%] right-[1%] border-2 border-black rounded-lg py-2 bg-white px-2 cursor-pointer hover:bg-[#97e4a1]"
+        id="darkmode"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="black"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-7 h-7"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+          />
+        </svg>
+      </div>
+      <!-- card -->
+      <div
+        class="bg-white w-2/6 h-5/6 rounded-4xl pt-16 px-24 border-4 border-black shadow-2xl text-center dark:bg-zinc-800 dark:text-white dark:border-white"
+      >
+        <h1 class="text-6xl font-bold mb-2 cursor-pointer">
+          <b class="text-7xl text-[#6fd57c]">$</b>Tip Buddy
+        </h1>
+        <h2>Make Calculating your tips easier</h2>
+        <div class="my-5 flex flex-col space-y-3">
+          <div>
+            <!-- bill -->
+            <h3 class="text-xl font-medium">Bill total: $</h3>
+            <input
+              type="text"
+              name=""
+              id="bill"
+              class="w-full border-2 border-black px-5 mt-2 py-2 rounded-lg font-black text-3xl text-center dark:text-black"
+            />
+          </div>
+          <div>
+            <!-- service charge -->
+            <h3 class="text-xl font-medium">Service Charge: %</h3>
+            <input
+              type="text"
+              name=""
+              id="service"
+              class="w-full border-2 border-black px-5 mt-2 py-2 rounded-lg font-black text-3xl text-center dark:text-black"
+            />
+          </div>
+          <div>
+            <!-- (n) of people -->
+            <h3 class="text-xl font-medium">Number of people paying</h3>
+            <input
+              type="text"
+              name=""
+              id="people"
+              class="w-full border-2 border-black px-5 mt-2 py-2 rounded-lg font-black text-3xl text-center dark:text-black"
+            />
+            <p class="text-sm mt-1">
+              Note: If you're not dividing the bill please enter "0" as your
+              option
+            </p>
+            <p class="text-[35px] leading-tight font-medium leading-tight mt-3">
+              Each person should pay<br />
+              <span class="text-5xl font-bold" id="result">$XX</span>
+            </p>
+            <button
+              class="border-b-4 border-2 border-black py-4 px-5 text-4xl font-bold rounded-4xl bg-[#6fd57c] text-black my-8"
+              id="calculate"
+            >
+              Calculate
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
   </body>
 </html>
