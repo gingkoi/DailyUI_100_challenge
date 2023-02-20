@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            poppin: ["Poppins", "sans-serif"],
+          },
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+        .rounded-4xl {
+          border-radius: 3rem; /* 24px */
+        }
+      }
+    </style>
+  </head>
+  <body class="font-poppin">
+    <!-- background -->
+    <div
+      class="h-screen bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 flex justify-center items-center"
+    >
+    <div class="hidden absolute z-10 backdrop-blur-sm bg-black/60 h-screen w-screen flex justify-center">
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="red"
+        stroke-width="0.2" stroke="white"
+        class="sm:w-[850px] sm:h-[765px] top-20 sm:top-0 absolute z-12  sm:scale-125"
+      >
+        <path
+          d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"
+        />
+      </svg>
+      <h4 class="absolute z-13 text-8xl sm:text-[150px] font-bold text-white top-[25%] sm:top-[15%]" id="result">98%</h4>
+      <h4 class="absolute z-13 bg-black sm:w-[400px] w-[300px] h-[200px] sm:h-[280px] top-[52%] sm:top-[35%] flex text-white" id="description">Test</h4>
+    </div>
+    
+      <!-- card -->
+      <div
+        class="w-[95%] h-[80%] sm:w-2/6 sm:h-5/6 bg-white rounded-4xl border-4 border-b-8 border-black flex flex-col py-10 relative"
+      >
+      <div class="cursor-pointer">       
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="red"
+        class="w-8 h-8 sm:w-10 sm:h-10 absolute top-[11%] sm:top-6 right-7 sm:right-12 rotate-[25deg]"
+      >
+        <path
+          d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"
+        />
+      </svg>
+      <h1 class="text-5xl text-center sm:text-6xl font-bold">
+        Love Calculator
+      </h1>
+    </div>
+        <h2 class="text-center text-sm sm:text-xl px-10 mt-2 sm:mt-4">
+          The Love Calculator provides a score from <b class="text-red-500">0%</b> to <b class="text-red-500">100%</b>  that is meant to
+          be an indication of a match in terms of love, based on the names of
+          two people.</h2><span class="font-bold mt-1 sm:mt-3 text-lg sm:text-3xl px-10 text-center leading-tight"
+            >The higher the percentage, the better the match.</span
+          >
+        </h2>
+        <div class="mt-8 flex flex-col px-10 sm:px-32">
+            <h3 class="text-center text-2xl sm:text-3xl font-medium">Name of Person 1:</h3>
+            <input type="text" class="border-2 rounded-lg border-black w-full text-xl py-1 px-3 text-center" id="person1">
+            <button class="border-2 border-b-4 bg-red-500 text-white border-black my-4 mx-10 sm:mx-20 rounded-3xl py-4 sm:py-6 sm:text-3xl text-2xl font-bold hover:opacity-80" id="calculateBtn">Calculate</button>
+            <input type="text" class="border-2 rounded-lg border-black w-full text-xl py-1 px-3 text-center" id="person2">
+            <h3 class="text-center text-2xl sm:text-3xl font-medium mt-1">Name of Person 2:</h3>
+        </div>
+        <p class="text-[10px] sm:text-[13px] text-justify mt-9 sm:mt-6 px-5 sm:px-12"><b>Note:</b> This calculator is intended for amusement only rather than as a real indication of love. Please follow your heart instead of the results of this calculator when considering love.</p>
+
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
