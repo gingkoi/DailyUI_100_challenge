@@ -1,5 +1,6 @@
 let calculateBtn = document.querySelector("#calculateBtn");
 let againBtn = document.querySelector("#againBtn");
+
 let calculate = function () {
   calculateBtn.addEventListener("click", () => {
     let result = document.querySelector("#result");
@@ -16,34 +17,45 @@ let calculate = function () {
     let O = combineNames.split("O").length - 1;
     let V = combineNames.split("V").length - 1;
     let secondScore = L + O + V + E;
+    let totalScore = Number(`${firstScore}${secondScore}`);
+    function countTo() {
+      let from = 0;
+      let to = totalScore;
+      let step = to > from ? 1 : -1;
+      let interval = 20;
+
+      if (from == to) {
+        result = from;
+        return;
+      }
+      let counter = setInterval(function () {
+        from += step;
+        result.textContent = `${from}%`;
+
+        if (from === to) {
+          clearInterval(counter);
+        }
+      }, interval);
+    }
 
     document.querySelector("#hiding").classList.toggle("hidden");
-    if (
-      Number(`${firstScore}${secondScore}`) >= 80 &&
-      Number(`${firstScore}${secondScore}`) < 100
-    ) {
-      result.textContent = `${firstScore}${secondScore}%`;
+    if (totalScore >= 80 && totalScore < 100) {
+      countTo();
       description.textContent = "You two go together like coke and mentos!";
-    } else if (Number(`${firstScore}${secondScore}`) >= 100) {
+    } else if (totalScore >= 100) {
       result.textContent = `100%`;
       description.textContent = "Two love birds are meant together!";
-    } else if (
-      Number(`${firstScore}${secondScore}`) >= 50 &&
-      Number(`${firstScore}${secondScore}`) < 80
-    ) {
-      result.textContent = `${firstScore}${secondScore}%`;
+    } else if (totalScore >= 50 && totalScore < 80) {
+      countTo();
       description.textContent = "Do you believe in miracles? Love is coming!";
-    } else if (
-      Number(`${firstScore}${secondScore}`) >= 30 &&
-      Number(`${firstScore}${secondScore}`) < 50
-    ) {
-      result.textContent = `${firstScore}${secondScore}%`;
+    } else if (totalScore >= 30 && totalScore < 50) {
+      countTo();
       description.textContent = "Nothing is impossible! Magic do happens!";
-    } else if (Number(`${firstScore}${secondScore}`) === 0) {
+    } else if (totalScore === 0) {
       result.textContent = `0%`;
       description.textContent = "Prove us wrong! Go for your lover!";
     } else {
-      result.textContent = `${firstScore}${secondScore}%`;
+      countTo();
       description.textContent = "Prove us wrong! Go for your lover!";
     }
   });
@@ -65,34 +77,45 @@ document.addEventListener("keydown", (e) => {
     let O = combineNames.split("O").length - 1;
     let V = combineNames.split("V").length - 1;
     let secondScore = L + O + V + E;
+    let totalScore = Number(`${firstScore}${secondScore}`);
+    function countTo() {
+      let from = 0;
+      let to = totalScore;
+      let step = to > from ? 1 : -1;
+      let interval = 20;
+
+      if (from == to) {
+        result = from;
+        return;
+      }
+      let counter = setInterval(function () {
+        from += step;
+        result.textContent = `${from}%`;
+
+        if (from === to) {
+          clearInterval(counter);
+        }
+      }, interval);
+    }
 
     document.querySelector("#hiding").classList.toggle("hidden");
-    if (
-      Number(`${firstScore}${secondScore}`) >= 80 &&
-      Number(`${firstScore}${secondScore}`) < 100
-    ) {
-      result.textContent = `${firstScore}${secondScore}%`;
+    if (totalScore >= 80 && totalScore < 100) {
+      countTo();
       description.textContent = "You two go together like coke and mentos!";
-    } else if (Number(`${firstScore}${secondScore}`) >= 100) {
+    } else if (totalScore >= 100) {
       result.textContent = `100%`;
       description.textContent = "Two love birds are meant together!";
-    } else if (
-      Number(`${firstScore}${secondScore}`) >= 50 &&
-      Number(`${firstScore}${secondScore}`) < 80
-    ) {
-      result.textContent = `${firstScore}${secondScore}%`;
+    } else if (totalScore >= 50 && totalScore < 80) {
+      countTo();
       description.textContent = "Do you believe in miracles? Love is coming!";
-    } else if (
-      Number(`${firstScore}${secondScore}`) >= 30 &&
-      Number(`${firstScore}${secondScore}`) < 50
-    ) {
-      result.textContent = `${firstScore}${secondScore}%`;
+    } else if (totalScore >= 30 && totalScore < 50) {
+      countTo();
       description.textContent = "Nothing is impossible! Magic do happens!";
-    } else if (Number(`${firstScore}${secondScore}`) === 0) {
+    } else if (totalScore === 0) {
       result.textContent = `0%`;
       description.textContent = "Prove us wrong! Go for your lover!";
     } else {
-      result.textContent = `${firstScore}${secondScore}%`;
+      countTo();
       description.textContent = "Prove us wrong! Go for your lover!";
     }
   }
