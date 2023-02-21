@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            poppin: ["Poppins", "sans-serif"],
+          },
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-poppin">
+    <!-- background -->
+    <div
+      class="bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 h-full w-full px-32 py-10"
+    >
+      <!-- Navbar -->
+      <div class="flex sm:justify-between items-center">
+        <div
+          class="cursor-pointer text-white text-2xl font-black flex items-end"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-10 h-10 pr-1"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.5 9.75a6 6 0 0111.573-2.226 3.75 3.75 0 014.133 4.303A4.5 4.5 0 0118 20.25H6.75a5.25 5.25 0 01-2.23-10.004 6.072 6.072 0 01-.02-.496z"
+              clip-rule="evenodd"
+            />
+          </svg>
+
+          ioum
+        </div>
+        <div
+          class="hidden sm:text-xl sm:font-medium sm:text-white sm:space-x-[80px] sm:flex sm:items-center"
+        >
+          <a href="" class="hover:opacity-60">Home</a>
+          <a href="" class="hover:opacity-60">Stories</a>
+          <a href="" class="hover:opacity-60">E-Ticket</a>
+          <a href="" class="hover:opacity-60">About Us</a>
+        </div>
+        <button
+          class="sm:bg-[#fcd9f3] sm:py-3 sm:px-9 sm:text-2xl sm:font-bold sm:text-white sm:rounded-3xl"
+        >
+          Login
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
