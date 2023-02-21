@@ -35,10 +35,10 @@
   <body class="font-poppin">
     <!-- background -->
     <div
-      class="bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 h-full w-full px-32 py-10"
+      class="bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 h-full w-screen sm:px-32 px-10 py-10"
     >
       <!-- Navbar -->
-      <div class="flex sm:justify-between items-center">
+      <div class="flex justify-between items-center">
         <div
           class="cursor-pointer text-white text-2xl font-black flex items-end"
         >
@@ -66,10 +66,65 @@
           <a href="" class="hover:opacity-60">About Us</a>
         </div>
         <button
-          class="sm:bg-[#fcd9f3] sm:py-3 sm:px-9 sm:text-2xl sm:font-bold sm:text-white sm:rounded-3xl"
+          class="hidden sm:block bg-[#d3b1fe] py-3 sm:px-9 text-2xl font-bold text-white rounded-3xl hover:opacity-90"
         >
           Login
         </button>
+        <!-- hamburgar -->
+        <div class="sm:hidden space-y-1">
+          <div class="bg-white h-1 w-8"></div>
+          <div class="bg-white h-1 w-5"></div>
+          <div class="bg-white h-1 w-8"></div>
+        </div>
+      </div>
+      <div class="sm:flex justify-between my-20">
+        <!-- hero -->
+        <div class="sm:mt-32 sm:w-[700px]">
+          <h1
+            class="sm:text-7xl text-4xl text-center sm:text-left font-bold tracking-wide text-white"
+          >
+            The Women<br />Empowerment <br />
+            Program 2023
+          </h1>
+          <h2
+            class="sm:pr-10 mt-8 text-left text-neutral-800 text-center sm:text-left text-sm sm:text-base"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+            sunt cupiditate nisi accusantium? Accusamus, laboriosam. Tempora
+            necessitatibus vitae, minima ipsa illum magni laborum! Mollitia eum
+            laborum ratione odit ipsum corporis.
+          </h2>
+          <div
+            class="mt-10 bg-white rounded-full sm:py-10 py-7 sm:px-7 px-5 relative"
+          >
+            <input
+              type="text"
+              name=""
+              id=""
+              value="Enter email address"
+              class="w-[130px] sm:w-[460px] text-xs sm:text-lg font-medium"
+            />
+            <button
+              class="absolute z-3 bg-[#080920] text-white sm:py-5 py-3 sm:px-7 px-5 text-base sm:text-xl font-medium rounded-full top-[20%] sm:top-[17%] sm:right-[3%] hover:opacity-90"
+            >
+              Register Now
+            </button>
+          </div>
+          <div class="flex justify-around mt-10">
+            <div class="flex items-center space-x-2">
+              <h3 class="text-3xl sm:text-6xl font-medium">9845</h3>
+              <h3 class="text-xs sm:text-xl">Participants <br />Registered</h3>
+            </div>
+            <div class="flex items-center space-x-2">
+              <h3 class="text-3xl sm:text-6xl font-medium">1M+</h3>
+              <h3 class="text-xs sm:text-xl">Investors <br />will attend</h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-cover border-4 border-white sm:w-[750px] w-[300px] h-[400px] sm:h-[800px] mr-10 rounded-3xl mt-5 sm:mt-0 shadow-2xl"
+          style="background-image: url(./pexels-gilbert-anthony-6220771.jpg)"
+        ></div>
       </div>
     </div>
   </body>
