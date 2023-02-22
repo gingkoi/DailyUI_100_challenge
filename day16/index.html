@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            oswald: ["Oswald", "sans-serif"],
+          },
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+        .half-background {
+          background: linear-gradient(to top, white 30%, transparent 30%);
+        }
+        .border-double {
+          border-style: double;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-oswald">
+    <!-- background -->
+    <div class="flex static">
+      <div class="bg-[#f7cfca] h-screen w-[55%]">
+        <div class="mt-[240px] px-32">
+          <h1
+            class="w-[485px] text-8xl uppercase font-regular text-[#081135] tracking-wider half-background"
+          >
+            The Juice &
+          </h1>
+          <h1
+            class="w-[600px] text-8xl uppercase font-regular text-[#081135] tracking-wider half-background"
+          >
+            Smoothie Bar
+          </h1>
+          <h2
+            class="uppercase text-4xl w-[550px] tracking-widest font-light mt-8"
+          >
+            Pure, raw, cold and slow pressed, additive free <br />
+            drinks in a conscious package
+          </h2>
+          <div class="space-x-10 mt-10 relative">
+            <div
+              class="absolute bg-[#b5d6fc] right-[46%] top-[20%] h-[60px] w-[160px]"
+            ></div>
+            <div
+              class="absolute bg-[#b5d6fc] left-[2%] top-[20%] h-[60px] w-[160px]"
+            ></div>
+            <button
+              class="uppercase text-lg border-4 border-white py-3 px-10 tracking-widest relative bg-[#f7cfca]"
+            >
+              Explore
+            </button>
+            <button
+              class="uppercase text-lg bg-white border-4 border-white py-3 px-10 tracking-widest relative"
+            >
+              Products
+            </button>
+          </div>
+          <div class="mt-32 flex justify-around gap-x-10">
+            <h3
+              class="flex gap-x-2 uppercase text-base items-center font-light tracking-widest half-background"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              Mo-Sa 07:30 - 18:30
+            </h3>
+            <h3
+              class="flex gap-x-2 uppercase text-base items-center font-light tracking-widest half-background"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+                />
+              </svg>
+
+              +44 321-65-49-87
+            </h3>
+            <h3
+              class="flex gap-x-2 uppercase text-base items-center font-light tracking-widest half-background"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+
+              Franklin Avenue 11, San Francisco, 2345
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="bg-[#8eb7b7] h-screen w-[45%]"></div>
+      <!-- navbar -->
+      <div
+        class="absolute w-full pt-16 px-32 flex justify-between items-center"
+      >
+        <div class="font-medium text-4xl">MELONIE</div>
+        <div class="uppercase text-xl font-regular">
+          <a href="" class="pt-20 pb-5 px-8 hover:bg-[#f7cfca]">About</a>
+          <a href="" class="pt-20 pb-5 px-8 hover:bg-[#f7cfca]">Drinks</a>
+          <a href="" class="pt-20 pb-5 px-8 hover:bg-[#f7cfca]">Location</a>
+          <a href="" class="pt-20 pb-5 px-8 hover:bg-[#f7cfca]">Order</a>
+        </div>
+      </div>
+      <div
+        class="absolute top-[15%] right-[8%] bg-white h-[650px] w-[850px] bg-center bg-cover"
+        style="
+          background-image: url(./1fd3a8_0ae425383be4404c8caecab721e45152_mv2.png);
+        "
+      ></div>
+    </div>
+  </body>
+</html>
