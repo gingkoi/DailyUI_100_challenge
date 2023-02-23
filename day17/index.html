@@ -7,6 +7,9 @@
     <script>
       tailwind.config = {
         theme: {
+          fontFamily: {
+            oswald: ["Oswald", "sans-serif"],
+          },
           extend: {
             colors: {
               clifford: "#da373d",
@@ -15,6 +18,12 @@
         },
       };
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style type="text/tailwindcss">
       @layer utilities {
         .content-auto {
@@ -23,7 +32,74 @@
       }
     </style>
   </head>
-  <body>
-    <h1 class="text-3xl font-bold underline **text-clifford**">Hello world!</h1>
+  <body class="font-oswald">
+    <!-- background -->
+    <div
+      class="bg-cover h-screen"
+      style="background-image: url(./pexels-muffin-creatives-2468773.jpg)"
+    >
+      <!-- popout message -->
+      <div
+        class="hidden backdrop-blur-sm bg-black/60 h-screen flex justify-center items-center"
+        id="popout"
+      >
+        <!-- card -->
+        <div class="bg-zinc-100 w-3/6 h-4/6 rounded-2xl flex justify-between">
+          <div
+            class="bg-cover w-[40%] rounded-l-2xl"
+            style="background-image: url(./pexels-aubin-kirch-13526741.jpg)"
+          ></div>
+          <div class="grow relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-8 h-8 absolute top-[1%] right-[1%] cursor-pointer"
+              id="close"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <div class="mx-14">
+              <h4 class="mt-10 text-6xl font-medium">Stay up to date</h4>
+              <p class="mt-5 text-2xl font-light tracking-wide">
+                Fill in the form below to sign up to our <br />
+                newsletter & be the first to know all our lastest <br />
+                promotions and offers.
+              </p>
+              <div class="mt-5 space-y-2">
+                <!-- form -->
+                <p class="text-2xl">Your name</p>
+                <input
+                  value="Enter your name"
+                  type="text"
+                  name=""
+                  id=""
+                  class="border border-b-4 border-b-[#8bd8de] text-xl py-5 px-3 w-full text-zinc-500"
+                />
+                <p class="text-2xl">Your email address</p>
+                <input
+                  value="Enter your email"
+                  type="text"
+                  name=""
+                  id=""
+                  class="bg-zinc-600 text-xl py-5 px-3 w-full text-white"
+                />
+              </div>
+              <button
+                class="bg-[#8bd8de] w-full rounded-lg mt-5 py-4 text-xl font-medium text-zinc-800 hover:opacity-80"
+              >
+                Complete Signup
+              </button>
+            </div>
+          </div>
+          <!-- right side -->
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
   </body>
 </html>
