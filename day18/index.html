@@ -29,6 +29,17 @@
         .content-auto {
           content-visibility: auto;
         }
+        .animate-ping-2 {
+          animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+
+          @keyframes ping {
+            75%,
+            100% {
+              transform: scale(2);
+              opacity: 0;
+            }
+          }
+        }
       }
     </style>
   </head>
@@ -45,6 +56,12 @@
         <!-- pricetag -->
       </div>
       <div
+        class="absolute z-1 bg-white w-10 h-10 rounded-full left-[3%] top-[66%] border-8 border-zinc-800 cursor-pointer animate-ping"
+        id="price-pointer-2"
+      >
+        <!-- pricetag -->
+      </div>
+      <div
         class="hidden absolute z-1 backdrop-blur-sm bg-black/70 w-[300px] h-[300px] right-[4%] top-[23%] rounded-3xl cursor-pointer px-5 py-10 border-4 border-[#ef8035]"
         id="price-details"
       >
@@ -53,6 +70,21 @@
           Top quality retro vintage leather
         </h3>
         <h3 class="text-white text-5xl font-bold mt-2">SGD $799</h3>
+        <button
+          class="bg-[#ef8035] text-xl font-medium py-4 px-10 w-full rounded-2xl mt-3 hover:opacity-80"
+        >
+          View Product
+        </button>
+      </div>
+      <div
+        class="hidden absolute z-1 backdrop-blur-sm bg-black/70 w-[300px] h-[300px] left-[2%] top-[35%] rounded-3xl cursor-pointer px-5 py-10 border-4 border-[#ef8035]"
+        id="price-details-2"
+      >
+        <h3 class="text-3xl text-[#ef8035] font-bold">Vintage Lamp</h3>
+        <h3 class="text-white text-xl font-regular mt-2">
+          Top quality retro vintage lamp
+        </h3>
+        <h3 class="text-white text-5xl font-bold mt-2">SGD $299</h3>
         <button
           class="bg-[#ef8035] text-xl font-medium py-4 px-10 w-full rounded-2xl mt-3 hover:opacity-80"
         >
@@ -90,6 +122,7 @@
         <div></div>
       </div>
     </div>
+
     <script src="./app.js"></script>
   </body>
 </html>
