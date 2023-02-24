@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            poppin: ["Poppins", "sans-serif"],
+          },
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-poppin">
+    <!-- hero -->
+    <div
+      class="w-screen h-[1000px] bg-cover bg-center relative"
+      style="background-image: url(./pexels-martin-péchy-1866149.jpg)"
+    >
+      <div
+        class="absolute z-1 bg-white w-12 h-12 rounded-full right-[10%] top-[54%] border-8 border-zinc-800 cursor-pointer"
+        id="price-pointer"
+      >
+        <!-- pricetag -->
+      </div>
+      <div
+        class="hidden absolute z-1 backdrop-blur-sm bg-black/70 w-[300px] h-[300px] right-[4%] top-[23%] rounded-3xl cursor-pointer px-5 py-10 border-4 border-[#ef8035]"
+        id="price-details"
+      >
+        <h3 class="text-3xl text-[#ef8035] font-bold">Vintage Sofa</h3>
+        <h3 class="text-white text-xl font-regular mt-2">
+          Top quality retro vintage leather
+        </h3>
+        <h3 class="text-white text-5xl font-bold mt-2">SGD $799</h3>
+        <button
+          class="bg-[#ef8035] text-xl font-medium py-4 px-10 w-full rounded-2xl mt-3 hover:opacity-80"
+        >
+          View Product
+        </button>
+      </div>
+      <div
+        class="absolute z-1 right-[25%] top-[26%] flex-col flex items-center"
+      >
+        <h1
+          class="text-8xl w-[900px] text-center font-bold leading-1 opacity-80"
+        >
+          Discover The Best Furniture For You
+        </h1>
+        <button
+          class="border border-black bg-black mt-10 text-[#fc8636] w-[350px] py-5 text-2xl rounded-md hover:opacity-90"
+        >
+          Explore All Products
+        </button>
+      </div>
+
+      <!-- navbar -->
+      <div class="flex justify-around pt-10 items-end">
+        <div class="text-4xl font-bold">
+          Inte<b class="text-[#ef8035] cursor-pointer">rio.</b>
+        </div>
+        <div class="text-2xl font-medium space-x-12 mr-14 text-zinc-800">
+          <a href="" class="hover:text-zinc-700 hover:underline">Categories</a>
+          <a href="" class="hover:text-zinc-700 hover:underline">Furniture</a>
+          <a href="" class="hover:text-zinc-700 hover:underline"
+            >Interior Design</a
+          >
+          <a href="" class="hover:text-zinc-700 hover:underline">Property</a>
+        </div>
+        <div></div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
