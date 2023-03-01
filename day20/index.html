@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            poppin: ["Poppins", "sans-serif"],
+            mono: ["Roboto Mono", "monospace"],
+          },
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-[#1a1c1e] px-32 font-poppin">
+    <!-- background -->
+    <div
+      class="bg-[#1a1c1e] h-auto border-r-2 border-l-2 border-neutral-700 relative"
+    >
+      <!-- navbar -->
+      <div
+        class="flex justify-between text-white py-14 border-b-2 border-neutral-700 items-center"
+      >
+        <div class="font-mono text-3xl font-bold">
+          pixel.<span class="text-[#d45496]">genius</span>
+        </div>
+        <div class="flex space-x-16">
+          <a href="" class="text-xl text-[#636265] hover:opacity-80"
+            >Services</a
+          >
+          <a href="" class="text-xl text-[#636265] hover:opacity-80"
+            >About Us</a
+          >
+          <a href="" class="text-xl text-[#636265] hover:opacity-80"
+            >Portfolio</a
+          >
+          <a href="" class="text-xl text-[#636265] hover:opacity-80">Careers</a>
+        </div>
+        <button class="border-2 border-white rounded-3xl py-3 px-12 text-lg">
+          Contact
+        </button>
+      </div>
+      <!-- hero -->
+      <div class="flex flex-col justify-center items-center">
+        <h1
+          class="text-center font-bold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-green-200 via-green-400 to-purple-700 mt-20"
+        >
+          We create <br />
+          Digital experience
+        </h1>
+        <h2 class="text-center font-mono mt-16 text-3xl text-[#727273]">
+          Here we specialize in providing innovative digital solutions
+          <br />that help business achieve their online goals
+        </h2>
+
+        <div
+          class="w-[800px] h-[650px] my-6 bg-center rounded-2xl grayscale shadow-3xl"
+          style="
+            background-image: url('./Quantum_galaxy_witch_b21a3c38-515d-41d2-bd24-b23750d1e831.png');
+          "
+        ></div>
+      </div>
+    </div>
+  </body>
+</html>
